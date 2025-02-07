@@ -1,6 +1,5 @@
-# This workflow will install dependencies, cache them, run linting and tests on multiple Node.js versions
 
-name: PicPay Workflow  # Corrigido o nome do workflow
+name: PicPay Workflow  
 
 on:
   push:
@@ -12,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x, 22.x]  # Versões do Node.js para testes
+        node-version: [20.x, 22.x]  
 
     steps:
       - name: Checkout repository
@@ -33,9 +32,3 @@ jobs:
       - name: Run Tests
         run: npm run test
 
-      - name: Upload Test Results (opcional)
-        if: success()
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-          path: ./coverage # Ajuste conforme a pasta onde a cobertura é gerada
