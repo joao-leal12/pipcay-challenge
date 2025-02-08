@@ -4,6 +4,8 @@ name: PicPay Workflow
 on:
   push:
     branches: [ "main" ]
+  pull:
+      branches: ["main"]
 
 jobs:
   test-and-lint:
