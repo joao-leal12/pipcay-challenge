@@ -13,7 +13,7 @@ describe('Payment service', () => {
   const user = { 
     id: 1,
     name: 'João Victor Leal Santos Cardoso', 
-    Cpf: '123.456.789-000',
+    Cpf: '123.456.789-00',
     valueToTransfer: 100 
   };
   beforeAll(async () => { 
