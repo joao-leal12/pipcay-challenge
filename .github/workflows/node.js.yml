@@ -4,11 +4,9 @@ name: PicPay Workflow
 on:
   push:
     branches: [ "main" ]
-  pull:
-      branches: ["main"]
 
 jobs:
-  test-and-lint:
+  test-and-lint-job:
     runs-on: ubuntu-latest
 
     strategy:
@@ -26,11 +24,11 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies now
-        run: npm ci  # Usa 'ci' para builds reprodutíveis
+        run: npm ci  
 
       - name: Run Linter
         run: npm run lint
 
-      # - name: Run Tests
-      #   run: npm run test
+      - name: Run Tests
+        run: npm run test
 
